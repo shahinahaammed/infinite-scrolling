@@ -19,7 +19,7 @@ function App() {
     } = useBookSearch(query, pageNumber)
   return (
     <>
-      <input type="text" onChange={handleChange} />
+      <input type="text" value={query} onChange={handleChange} />
       {books.map(book =>{
         return <div key={book}>{book}</div>
       })}
